@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BusinessProject.Models.ZonaGeografica>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreZona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Zoologico.nombreZoo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreZona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Zoologico.nombreZoo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigoZona }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigoZona }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigoZona })
+        </td>
+    </tr>
+}
+
+</table>

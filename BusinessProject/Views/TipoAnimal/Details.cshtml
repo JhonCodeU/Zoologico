@@ -1,0 +1,26 @@
+﻿@model BusinessProject.Models.TipoAnimal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoAnimal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreTipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoTipoAnimal }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BusinessProject.Models.cita>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreCita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaCita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.horaFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Animal.nombreAnimal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.veterinario.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreCita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaCita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.horaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Animal.nombreAnimal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.veterinario.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigoCita }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigoCita }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigoCita })
+        </td>
+    </tr>
+}
+
+</table>

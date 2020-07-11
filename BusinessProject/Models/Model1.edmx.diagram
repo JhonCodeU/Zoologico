@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b0932dffe884ec4891d1c4992860afa" Name="Diagram1">
+        <EntityTypeShape EntityType="ZooModel.Animal" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.AtiendeParqueadero" Width="1.5" PointX="12.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.cita" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.cliente" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.compra" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.modulo" Width="1.5" PointX="5.5" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.operacione" Width="1.5" PointX="7.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.parqueadero" Width="1.5" PointX="15" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.planTuristico" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.rol" Width="1.5" PointX="7.75" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.rol_operacion" Width="1.5" PointX="10" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.sysdiagram" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.TipoAnimal" Width="1.5" PointX="6" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.trabajador" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.usuario" Width="1.5" PointX="10" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.vehiculo" Width="1.5" PointX="15" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.veterinario" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.ZonaGeografica" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZooModel.Zoologico" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="ZooModel.FK__Animal__fk_codig__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__Animal__fk_codig__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__cita__fk_codigoA__2C3393D0" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__parqueade__fk_co__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__vehiculo__fk_cod__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__cita__fk_codigoV__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_compra_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_compra_planTuristico" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_operaciones_modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_rol_operacion_operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__planTuris__fk_co__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_rol_operacion_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK_usuario_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__trabajado__fk_co__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="ZooModel.FK__ZonaGeogr__codig__24927208" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

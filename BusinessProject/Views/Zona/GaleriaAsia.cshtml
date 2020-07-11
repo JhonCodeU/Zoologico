@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "GaleriaAsia";
+}
+
+@{
+    ViewBag.Title = "GaleriaAmerica";
+}
+
+
+@{
+    ViewBag.Title = "GaleriaAfrica";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Kingdom Zoo | Gallery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href=@Url.Content("~/Design/Zona/css/asia.css") type="text/css" />
+</head>
+<body>
+    <div id="page">
+        <div id="header">
+            <a href="#" id="logo"><img src=@Url.Content("~/Design/Zona/images/images/logo-page.jpg") alt="" /></a>
+            <ul id="links">
+                <li class="first">
+                    <h2><a href="live.html">Live</a></h2>
+                    <span>Have fun in your visit</span>
+                </li>
+                <li>
+                    <h2><a href="#">Love</a></h2>
+                    <span>Donate for the animals</span>
+                </li>
+                <li>
+                    <h2><a href="#">Learn</a></h2>
+                    <span>Get to know the animals</span>
+                </li>
+            </ul>
+            <a href="#" id="button">Buy tickets / Check Events</a>
+            <ul id="navigation">
+                <li id="link1"><a href="#">@Html.ActionLink("Home", "Asia", "Zona")</a></li>
+                <li id="link2"><a href="#">The Zoo</a></li>
+                <li id="link3"><a href="#">Visitors Info</a></li>
+                <li id="link4"><a href="#">Tickets</a></li>
+                <li id="link5"><a href="#">Events</a></li>
+                <li id="link6" class="selected"><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <div id="gallery">
+                <h1>Meet our Animals</h1>
+                <ul>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://seas.indiana.edu/_assets/css/img/primate7.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Morbi Suscipit</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://www.planetdeadly.com/wp-content/uploads/komodo-dragon-720x479.jpg")  width="210" height="211" alt="" /></a></div>
+                        <a href="#">Donec Augue</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://i.pinimg.com/originals/21/33/2f/21332f3ccf8e373940a94e8e3fd00d8e.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Rhoncus Rutrum</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://imgs.mongabay.com/wp-content/uploads/sites/20/2016/07/01200403/OPEN-douc.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Donec Lacus</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://cdn.britannica.com/98/161698-050-D3DAA004/Sumatran-rhinoceros-wildlife-sanctuary-Indonesia-Sumatra.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Rinoceronte</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://www.greenqueen.com.hk/wp-content/uploads/2020/03/cute-baby-elephant-pinterest.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Integer Libero</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT0rykxrD6iD45WAIkdiPLz-2kXb9DeVOMITQ&usqp=CAU") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Malesuada Lacinia</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://almostgoneforgood.weebly.com/uploads/2/4/6/4/24648258/8363533_orig.jpg") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Praesent Odio</a>
+                    </li>
+                    <li>
+                        <div><a href="#"><img src=@Url.Content("https://img.buzzfeed.com/buzzfeed-static/static/2019-09/17/21/asset/0f2de2069ee9/sub-buzz-155-1568754738-1.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto&output-quality=auto&output-format=auto&downsize=360:*") width="210" height="211" alt="" /></a></div>
+                        <a href="#">Pulvinar Ultrices</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+                <a href="#" class="logo"><img src=@Url.Content("https://lh3.googleusercontent.com/proxy/pfj0gIGikNab2PX0qbaZ5vRMZcaN7Ehe2jBv66ik8QMBP3LRf7Aef_ZiruSTIS0URLrkmc30WnU3CqoIi1cvF67JcqvGYXNpIrLwNC94dFSA0nKBMZmcQRg3-grAKA5qlJDZFzkCaw") width="250" height="207" alt="" /></a>
+                <div>
+                    <p>Ellentesque habitant morbi tristique senectus et 0000</p>
+                    <span>285 067-39 282 / 5282 9273 999</span> <span>email@animalkingdomzoo.com</span>
+                </div>
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tickets.html">Tickets</a></li>
+                    <li><a href="zoo.html">The Zoo</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Live : Have fun in your visit</a></li>
+                    <li><a href="#">Love : Donate for the animals</a></li>
+                    <li><a href="#">Learn : Get to know the animals</a></li>
+                </ul>
+                <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Template By <a target="_blank" href="http://www.freewebsitetemplates.com/">FreeWebsiteTemplates.com</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

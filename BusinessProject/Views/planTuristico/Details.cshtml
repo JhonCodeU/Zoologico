@@ -1,0 +1,42 @@
+﻿@model BusinessProject.Models.planTuristico
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>planTuristico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrePlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrePlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zoologico.nombreZoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zoologico.nombreZoo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoPlan }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

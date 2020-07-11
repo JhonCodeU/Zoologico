@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" type="text/css" href=@Url.Content("~/Design/btn/btnLogin.css")>
+    <!--===============================================================================================-->
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Duru+Sans|Actor' rel='stylesheet' type='text/css'>
+
+    <!--Bootshape-->
+    <link rel="stylesheet" href=@Url.Content("~/Design/Home/css/bootshape.css")>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Planet", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Animales", "Index", "Animal")</li>
+                    <li>@Html.ActionLink("Cita", "Index", "Cita")</li>
+                    <li>@Html.ActionLink("Parqueadero", "Index", "Vehiculo")</li>
+                    <li>@Html.ActionLink("Plan Turistico", "Index", "planTuristico")</li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Zonas Geograficas</button>
+                        <div class="dropdown-content">
+                            @Html.ActionLink("Africa", "Africa", "Zona")
+                            @Html.ActionLink("America", "America", "Zona")
+                            @Html.ActionLink("Asia", "Asia", "Zona")
+                        </div>
+                    </div>
+                    <li>@Html.ActionLink("System Manager", "System", "systemManager")</li>
+                </ul>
+                <button type="button" class="btn btn-info float-right">@Html.ActionLink("Log Out", "Login", "closeSession")</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Design/bootstrap_4.5.0/css/bootstrap.min")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

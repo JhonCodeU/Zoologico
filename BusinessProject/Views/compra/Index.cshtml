@@ -1,0 +1,58 @@
+﻿@model IEnumerable<BusinessProject.Models.compra>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Compra</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            <a>Numero zonas adicionales</a>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precioTotal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidadPersonas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.nombres)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.planTuristico.nombrePlan)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroZonas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precioTotal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidadPersonas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.nombres)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.planTuristico.nombrePlan)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.codigoCompra }) |
+            @Html.ActionLink("Details", "Details", new { id=item.codigoCompra }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.codigoCompra })
+        </td>
+    </tr>
+}
+
+</table>
+<button type="button" class="btn btn-outline-danger">@Html.ActionLink("Nuevo cliente", "Index", "Cliente")</button>

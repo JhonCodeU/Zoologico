@@ -1,0 +1,76 @@
+﻿@model IEnumerable<BusinessProject.Models.Animal>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            float:left;
+            margin: 5px 5px;
+        }
+        .card img{
+            height: 280px;
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+            white-space: nowrap;
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        .card .container ul li {
+            text-decoration: none;
+            list-style: none;
+            display: inline-block;
+            margin-left: 5px;
+        }
+
+        h4 b {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <br /> <br />
+    <h2>Animales</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @foreach (var item in Model)
+    {
+        <div class="card">
+            <img src=@Html.DisplayFor(modelItem => item.ImgAnimal) alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>@Html.DisplayFor(modelItem => item.nombreAnimal)</b></h4>
+                <p>@Html.DisplayFor(modelItem => item.TipoAnimal.nombreTipo)</p>
+                <p>@Html.DisplayFor(modelItem => item.ZonaGeografica.nombreZona)</p>
+                <ul>
+                    <li><a>@Html.ActionLink("Edit", "Edit", new { id = item.codigoAnimal })</a></li>
+                    <li> @Html.ActionLink("Details", "Details", new { id = item.codigoAnimal })</li>
+                    <li>@Html.ActionLink("Delete", "Delete", new { id = item.codigoAnimal })</li>
+                </ul>
+            </div>
+        </div>
+    }
+    <br />
+</body>
+</html>

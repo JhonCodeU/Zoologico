@@ -1,0 +1,103 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Arial, Sans-serif;
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.main .ubicacion {
+background: #fff;
+padding: 60px 0;
+}
+
+.main .ubicacion .titulo {
+    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.main .ubicacion .direccion {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.main .ubicacion .horarios {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.main .ubicacion .direccion .calle {
+    margin-bottom: 15px;
+}
+
+.main .ubicacion .horarios {
+    overflow: hidden;
+}
+
+.main .ubicacion .horarios h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main .ubicacion .horarios .entre-semana,
+.main .ubicacion .horarios .fin-semana {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.main .mapa {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main .mapa iframe {
+    width: 100%;
+    max-height: 600px;
+}
+
+@media screen and (max-width: 400px) {
+    .main .acerca-de article h3 {
+        font-size: 34px;
+        margin-bottom: 10px;
+    }
+
+    .main .menu article .nombre,
+    .main .menu article .precio {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .main .ubicacion .direccion,
+    .main .ubicacion .horarios {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main .ubicacion .direccion {
+        margin-bottom: 20px;
+    }
+
+    .main .ubicacion .horarios .entre-semana,
+    .main .ubicacion .horarios .fin-semana {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

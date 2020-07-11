@@ -1,0 +1,58 @@
+﻿@model BusinessProject.Models.compra
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>compra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroZonas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroZonas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioTotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidadPersonas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidadPersonas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente.nombres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cliente.nombres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.planTuristico.nombrePlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.planTuristico.nombrePlan)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.codigoCompra }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

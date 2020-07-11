@@ -1,0 +1,48 @@
+﻿@model BusinessProject.Models.planTuristico
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>planTuristico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrePlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrePlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precioPlan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precioPlan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Zoologico.nombreZoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zoologico.nombreZoo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

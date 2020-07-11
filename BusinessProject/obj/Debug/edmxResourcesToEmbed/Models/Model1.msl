@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ZooModelStoreContainer" CdmEntityContainer="ZooEntities1">
+    <EntitySetMapping Name="Animals">
+      <EntityTypeMapping TypeName="ZooModel.Animal">
+        <MappingFragment StoreEntitySet="Animal">
+          <ScalarProperty Name="codigoAnimal" ColumnName="codigoAnimal" />
+          <ScalarProperty Name="nombreAnimal" ColumnName="nombreAnimal" />
+          <ScalarProperty Name="fk_codigo_tipoAnimal" ColumnName="fk_codigo_tipoAnimal" />
+          <ScalarProperty Name="fk_codigo_zona" ColumnName="fk_codigo_zona" />
+          <ScalarProperty Name="ImgAnimal" ColumnName="ImgAnimal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AtiendeParqueaderoes">
+      <EntityTypeMapping TypeName="ZooModel.AtiendeParqueadero">
+        <MappingFragment StoreEntitySet="AtiendeParqueadero">
+          <ScalarProperty Name="PrecioTotalP" ColumnName="PrecioTotalP" />
+          <ScalarProperty Name="codigoParqueo" ColumnName="codigoParqueo" />
+          <ScalarProperty Name="fechaParqueo" ColumnName="fechaParqueo" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="horaFin" ColumnName="horaFin" />
+          <ScalarProperty Name="Lugar" ColumnName="Lugar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="citas">
+      <EntityTypeMapping TypeName="ZooModel.cita">
+        <MappingFragment StoreEntitySet="cita">
+          <ScalarProperty Name="codigoCita" ColumnName="codigoCita" />
+          <ScalarProperty Name="nombreCita" ColumnName="nombreCita" />
+          <ScalarProperty Name="fechaCita" ColumnName="fechaCita" />
+          <ScalarProperty Name="horaInicio" ColumnName="horaInicio" />
+          <ScalarProperty Name="horaFin" ColumnName="horaFin" />
+          <ScalarProperty Name="fk_codigoVeterinario" ColumnName="fk_codigoVeterinario" />
+          <ScalarProperty Name="fk_codigoAnimal" ColumnName="fk_codigoAnimal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clientes">
+      <EntityTypeMapping TypeName="ZooModel.cliente">
+        <MappingFragment StoreEntitySet="cliente">
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compras">
+      <EntityTypeMapping TypeName="ZooModel.compra">
+        <MappingFragment StoreEntitySet="compra">
+          <ScalarProperty Name="codigoCompra" ColumnName="codigoCompra" />
+          <ScalarProperty Name="numeroZonas" ColumnName="numeroZonas" />
+          <ScalarProperty Name="precioTotal" ColumnName="precioTotal" />
+          <ScalarProperty Name="cantidadPersonas" ColumnName="cantidadPersonas" />
+          <ScalarProperty Name="fk_idCliente" ColumnName="fk_idCliente" />
+          <ScalarProperty Name="fk_idPlan" ColumnName="fk_idPlan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moduloes">
+      <EntityTypeMapping TypeName="ZooModel.modulo">
+        <MappingFragment StoreEntitySet="modulo">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="operaciones">
+      <EntityTypeMapping TypeName="ZooModel.operacione">
+        <MappingFragment StoreEntitySet="operaciones">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idModulo" ColumnName="idModulo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="parqueaderoes">
+      <EntityTypeMapping TypeName="ZooModel.parqueadero">
+        <MappingFragment StoreEntitySet="parqueadero">
+          <ScalarProperty Name="codigoParqueadero" ColumnName="codigoParqueadero" />
+          <ScalarProperty Name="fk_codigoParqueo" ColumnName="fk_codigoParqueo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="planTuristicoes">
+      <EntityTypeMapping TypeName="ZooModel.planTuristico">
+        <MappingFragment StoreEntitySet="planTuristico">
+          <ScalarProperty Name="codigoPlan" ColumnName="codigoPlan" />
+          <ScalarProperty Name="nombrePlan" ColumnName="nombrePlan" />
+          <ScalarProperty Name="precioPlan" ColumnName="precioPlan" />
+          <ScalarProperty Name="fk_codigoZoo" ColumnName="fk_codigoZoo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rols">
+      <EntityTypeMapping TypeName="ZooModel.rol">
+        <MappingFragment StoreEntitySet="rol">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rol_operacion">
+      <EntityTypeMapping TypeName="ZooModel.rol_operacion">
+        <MappingFragment StoreEntitySet="rol_operacion">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+          <ScalarProperty Name="idOperacion" ColumnName="idOperacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ZooModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoAnimals">
+      <EntityTypeMapping TypeName="ZooModel.TipoAnimal">
+        <MappingFragment StoreEntitySet="TipoAnimal">
+          <ScalarProperty Name="codigoTipoAnimal" ColumnName="codigoTipoAnimal" />
+          <ScalarProperty Name="nombreTipo" ColumnName="nombreTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trabajadors">
+      <EntityTypeMapping TypeName="ZooModel.trabajador">
+        <MappingFragment StoreEntitySet="trabajador">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="edad" ColumnName="edad" />
+          <ScalarProperty Name="celular" ColumnName="celular" />
+          <ScalarProperty Name="fk_codigoZona" ColumnName="fk_codigoZona" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="ZooModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idRol" ColumnName="idRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehiculoes">
+      <EntityTypeMapping TypeName="ZooModel.vehiculo">
+        <MappingFragment StoreEntitySet="vehiculo">
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="placa" ColumnName="placa" />
+          <ScalarProperty Name="propietario" ColumnName="propietario" />
+          <ScalarProperty Name="fk_codigoParqueo" ColumnName="fk_codigoParqueo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="veterinarios">
+      <EntityTypeMapping TypeName="ZooModel.veterinario">
+        <MappingFragment StoreEntitySet="veterinario">
+          <ScalarProperty Name="codigoVeterinario" ColumnName="codigoVeterinario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZonaGeograficas">
+      <EntityTypeMapping TypeName="ZooModel.ZonaGeografica">
+        <MappingFragment StoreEntitySet="ZonaGeografica">
+          <ScalarProperty Name="codigoZona" ColumnName="codigoZona" />
+          <ScalarProperty Name="nombreZona" ColumnName="nombreZona" />
+          <ScalarProperty Name="codigoZoo" ColumnName="codigoZoo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zoologicoes">
+      <EntityTypeMapping TypeName="ZooModel.Zoologico">
+        <MappingFragment StoreEntitySet="Zoologico">
+          <ScalarProperty Name="codigoZoo" ColumnName="codigoZoo" />
+          <ScalarProperty Name="nombreZoo" ColumnName="nombreZoo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
